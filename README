@@ -1,3 +1,60 @@
+## Inspectron README
+==================
+This yocto was branched from the yocto source on the fido branch. This branch is targeted at the Inspectron imx6 devices. 
+
+### Requirements
+
+* Build machine must be ubuntu 16.04 or earlier. Will **not** work on ubuntu 18.04 or greater
+* Suggested 8GB RAM or more
+* Suggested minimum 120GB of Storage space
+* Suggested PC with 4 cores or more
+
+### Setup
+1) install the required packages as suggested by the yocto organization
+``` bash
+sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+     build-essential chrpath socat cpio python3 python3-pip python3-pexpect \
+     xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev \
+     pylint3 xterm
+```
+2) clone yocto_imx from Inspectron
+``` bash
+git clone git@github.com:Inspectron/yocto_imx.git
+```
+
+3) clone the meta layers (qt5, inspectron, openembedded)
+``` bash
+cd yocto_imx
+git clone -b fido git://git.yoctoproject.org/meta-fsl-arm
+git clone -b fido git://github.com/SolidRun/meta-solidrun-arm-imx6.git
+git clone git@github.com:Inspectron/meta-inspectron.git
+git clone git@github.com:Inspectron/meta-qt5.git
+git clone git@github.com:Inspectron/meta-openembedded.git
+```
+
+### Building
+1) run oe setup script. This will create build/conf/local.conf & build/conf/bblayers.conf if they do not exist. You should run this before building
+``` bash
+source oe-init-build-env
+```
+
+2) build the image
+This should take a while
+``` bash
+bitbake inspectron-base-image
+```
+
+3) (optional) build the sdk. This should install the sdk to /opt/poky/...
+``` bash
+bitbake inspectron-base-sdk
+```
+
+### Images
+After a successful build, the images will be in build/tmp/deploy/images/inspectron-itb200. There will files for all your builds, with a symlink to the most recent sdcard image.
+
+---
+## Poky README
+
 Poky
 ====
 
