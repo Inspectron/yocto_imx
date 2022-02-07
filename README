@@ -52,6 +52,10 @@ bitbake inspectron-base-sdk
 ### Images
 After a successful build, the images will be in build/tmp/deploy/images/inspectron-itb200. There will files for all your builds, with a symlink to the most recent sdcard image.
 
+### References 
+https://solidrun.atlassian.net/wiki/spaces/developer/pages/287277558/Yocto+for+i.MX6
+
+
 ---
 ## Poky README
 
