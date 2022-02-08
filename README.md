@@ -1,5 +1,5 @@
-## Inspectron README
-==================
+Inspectron README
+====
 This yocto was branched from the yocto source on the fido branch. This branch is targeted at the Inspectron imx6 devices. 
 
 ### Requirements
@@ -52,12 +52,32 @@ bitbake inspectron-base-sdk
 ### Images
 After a successful build, the images will be in build/tmp/deploy/images/inspectron-itb200. There will files for all your builds, with a symlink to the most recent sdcard image.
 
-### References 
-https://solidrun.atlassian.net/wiki/spaces/developer/pages/287277558/Yocto+for+i.MX6
+### Helpful commands
+Most of these are available in the [BitBake command Cheat Sheet](https://www.openembedded.org/wiki/Bitbake_cheat_sheet) .
 
+#### build a package
+``` bash
+bitbake <pkg-name>
+```
+
+#### clean a package
+``` bash
+bitbake -c clean <pkg-name>
+```
+
+
+### References 
+* [Solidrun Yocto for i.MX6](https://solidrun.atlassian.net/wiki/spaces/developer/pages/287277558/Yocto+for+i.MX6)
+* [Yocto Manual - supported Distros](https://www.yoctoproject.org/docs/2.4.1/ref-manual/ref-manual.html#detailed-supported-distros)
+* [Yocto Manua - Quick Start](https://www.yoctoproject.org/docs/2.4.1/yocto-project-qs/yocto-project-qs.html)
+* [BitBake file Cheat Sheet](https://elinux.org/Bitbake_Cheat_Sheet)
+* [BitBake command Cheat Sheet](https://www.openembedded.org/wiki/Bitbake_cheat_sheet)
 
 ---
-## Poky README
+---
+Poky README
+---
+---
 
 Poky
 ====
