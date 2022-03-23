@@ -26,7 +26,7 @@ git clone git@github.com:Inspectron/yocto_imx.git
 ``` bash
 cd yocto_imx
 git clone -b fido git://git.yoctoproject.org/meta-fsl-arm
-git clone -b fido git://github.com/SolidRun/meta-solidrun-arm-imx6.git
+git clone -b fido git@github.com:SolidRun/meta-solidrun-arm-imx6.git
 git clone git@github.com:Inspectron/meta-inspectron.git
 git clone git@github.com:Inspectron/meta-qt5.git
 git clone git@github.com:Inspectron/meta-openembedded.git
