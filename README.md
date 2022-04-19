@@ -30,6 +30,7 @@ git clone -b fido git@github.com:SolidRun/meta-solidrun-arm-imx6.git
 git clone git@github.com:Inspectron/meta-inspectron.git
 git clone git@github.com:Inspectron/meta-qt5.git
 git clone git@github.com:Inspectron/meta-openembedded.git
+git clone git@github.com:Inspectron/meta-murata-wireless.git
 ```
 
 ### Building
